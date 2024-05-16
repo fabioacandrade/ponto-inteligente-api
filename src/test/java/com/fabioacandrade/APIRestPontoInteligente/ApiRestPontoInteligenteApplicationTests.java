@@ -1,13 +1,16 @@
 package com.fabioacandrade.APIRestPontoInteligente;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
+
 
 @SpringBootTest
-class ApiRestPontoInteligenteApplicationTests {
+@ActiveProfiles("test")
+public class ApiRestPontoInteligenteApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() {
 	}
 
 }
