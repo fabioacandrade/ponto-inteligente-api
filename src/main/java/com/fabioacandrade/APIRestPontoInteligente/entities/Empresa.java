@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 @Table(name = "empresa")
 public class Empresa implements Serializable {
+
     private static final long serialVersionUID = 3960436649365666213L;
 
     private long id;
