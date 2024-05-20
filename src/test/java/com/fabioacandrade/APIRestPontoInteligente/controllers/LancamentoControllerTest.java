@@ -1,12 +1,20 @@
 package com.fabioacandrade.APIRestPontoInteligente.controllers;
 
 
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Optional;
+
 import com.fabioacandrade.APIRestPontoInteligente.dtos.LancamentoDto;
 import com.fabioacandrade.APIRestPontoInteligente.entities.Funcionario;
 import com.fabioacandrade.APIRestPontoInteligente.entities.Lancamento;
 import com.fabioacandrade.APIRestPontoInteligente.enums.TipoEnum;
 import com.fabioacandrade.APIRestPontoInteligente.services.FuncionarioService;
 import com.fabioacandrade.APIRestPontoInteligente.services.LancamentoService;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,14 +33,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Optional;
-
-
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
@@ -47,9 +47,9 @@ public class LancamentoControllerTest {
     @MockBean
     private FuncionarioService funcionarioService;
 
-    private static final String  URL_BASE = "/api/lancamentos";
-    private static final Long  ID_FUNCIONARIO = 1L;
-    private static final Long  ID_LANCAMENTO = 1L;
+    private static final String URL_BASE = "/api/lancamentos/";
+    private static final Long ID_FUNCIONARIO = 1L;
+    private static final Long ID_LANCAMENTO = 1L;
     private static final String TIPO = TipoEnum.INICIO_TRABALHO.name();
     private static final Date DATA = new Date();
 

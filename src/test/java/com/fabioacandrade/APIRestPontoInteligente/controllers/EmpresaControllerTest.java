@@ -45,7 +45,7 @@ public class EmpresaControllerTest {
 
         mvc.perform(MockMvcRequestBuilders.get(BUSCAR_EMPRESA_CNPJ_URL + CNPJ).accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isBadRequest())
-                .andExpect(jsonPath("$.erros").value("Empresa não encontrada para o CNPJ " + CNPJ));
+                .andExpect(jsonPath("$.errors").value("Empresa não encontrada para o CNPJ " + CNPJ));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class EmpresaControllerTest {
                 .andExpect(jsonPath("$.data.id").value(ID))
                 .andExpect(jsonPath("$.data.razaoSocial",equalTo(RAZAO_SOCIAL)))
                 .andExpect(jsonPath("$.data.cnpj",equalTo(CNPJ)))
-                .andExpect(jsonPath("$.erros").isEmpty());
+                .andExpect(jsonPath("$.errors").isEmpty());
     }
 
     private Empresa obterDadosEmpresa() {

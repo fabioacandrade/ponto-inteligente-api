@@ -38,6 +38,7 @@ public class EmpresaServiceTest {
         Assertions.assertTrue(empresa.isPresent());
     }
 
+    @Test
     public void testPersistirEmpresa(){
         Empresa empresa = this.empresaService.persistir(new Empresa());
         Assertions.assertNotNull(empresa);

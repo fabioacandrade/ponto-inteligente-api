@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
-//@SpringBootApplication //Retirar ao chegar na aula 24
+//@SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
+@SpringBootApplication //Retirar ao chegar na aula 24
 @EnableCaching
 public class ApiRestPontoInteligenteApplication {
 
