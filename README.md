@@ -1,2 +1,2 @@
 # ponto-inteligente-api
-API do sistema inteligente de ponto com Java e Spring Boot
+API RESTful de um Sistema Inteligente de Ponto com Java 11 e Spring Boot
